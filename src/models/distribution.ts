@@ -36,4 +36,4 @@ const distributionSchema = new mongoose.Schema({
     }
 })
 
-export default mongoose.model("distribution", distributionSchema)
+export default mongoose.model("Distribution", distributionSchema)

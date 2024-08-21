@@ -1,27 +1,22 @@
 import dotenv from 'dotenv'; 
-import { logger } from "@1blckhrt_/tslogger";
 import express from "express";
-import mongoose from "mongoose";
+import cors from "cors";
+import connectDB from './utils/connectDB';
+import { logger } from "@1blckhrt_/tslogger";
+import router from './routes';
 
 dotenv.config();
 
+const PORT = Number.parseInt(process.env.PORT ?? '3000');
+
 const app = express();
-
-if (process.env.DB_URL) {
-  mongoose.connect(process.env.DB_URL);
-} else {
-  logger.error("DB_URL environment variable is not defined. The program will likely crash.");
-}
-const db = mongoose.connection;
-db.on("error", (error) => logger.error(`${error}`))
-db.once("open", () => logger.success("Connected to MongoDB!"))
-
+connectDB();
+app.set("trust proxy", 1);
+app.use(cors());
 app.use(express.json());
+app.use(router);
 
-import distributionsRouter from "./routes/distributions";
-app.use("/distributions", distributionsRouter)
-
-app.listen(3000, () => {
-  logger.success("Server has started on port 3000");
+app.listen(PORT, () => {
+  logger.success(`Server has started on port ${PORT}`);
 });
 
