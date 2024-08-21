@@ -5,6 +5,7 @@
   "scripts": {
     "start": "tsc && node dist/app.js",
     "lint": "eslint src/*",
+    "format": "prettier --config .prettierrc 'src/**/*.ts' --write",
     "dev": "nodemon --watch '*.ts' --exec 'ts-node' ./src/server.ts"
   },
   "keywords": [],

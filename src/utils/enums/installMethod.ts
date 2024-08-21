@@ -1,4 +1,4 @@
 export enum InstallMethod {
-    GUI = "GUI",
-    CLI = "CLI",
+  GUI = "GUI",
+  CLI = "CLI"
 }

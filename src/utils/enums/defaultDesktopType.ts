@@ -1,5 +1,5 @@
 export enum DefaultDesktopType {
-    DesktopEnvironment = "Desktop Environment",
-    WindowManager = "Window Manager",
-    Terminal = "Terminal"
+  DesktopEnvironment = "Desktop Environment",
+  WindowManager = "Window Manager",
+  Terminal = "Terminal"
 }

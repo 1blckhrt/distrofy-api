@@ -5,10 +5,9 @@ import { PackageManagementSystem } from "./packageManagementSystem";
 import { ReleaseModel } from "./releaseModel";
 
 export {
-    BasedOn,
-    DefaultDesktopType,
-    InstallMethod,
-    PackageManagementSystem,
-    ReleaseModel
+  BasedOn,
+  DefaultDesktopType,
+  InstallMethod,
+  PackageManagementSystem,
+  ReleaseModel
 };
-
