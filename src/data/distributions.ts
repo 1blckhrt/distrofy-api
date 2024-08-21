@@ -25,7 +25,7 @@ export const distributions: Distribution[] = [
     latestVersionReleaseDate: new Date("2024-08-21"),
     packageManagementSystem: PackageManagementSystem.Pacman,
     releaseModel: ReleaseModel.Rolling,
-    defaultDesktopType: DefaultDesktopType.WindowManager,
+    defaultDesktopType: DefaultDesktopType.Terminal,
     installMethod: InstallMethod.CLI
   },
   {
