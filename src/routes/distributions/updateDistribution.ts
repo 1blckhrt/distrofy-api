@@ -1,6 +1,17 @@
 import { Request, Response } from "express";
+import Distribution from "../../models/distribution";
 
 export async function updateDistribution(req: Request, res: Response) {
+
+    const distributionId = req.params.id;
+    const distribution = await Distribution.findById(distributionId);
+
+    if (!distribution) {
+        return res.status(404).json({ message: "Distribution not found" });
+    }
+
+    res.locals.distribution = distribution;
+
     if (req.body.name != null) {
         res.locals.distribution.name = req.body.name;
     }
@@ -28,15 +39,15 @@ export async function updateDistribution(req: Request, res: Response) {
     if (req.body.defaultDesktopType != null) {
         res.locals.distribution.defaultDesktopType = req.body.defaultDesktopType;
     }
-    
+
     if (req.body.installMethod != null) {
         res.locals.distribution.installMethod = req.body.installMethod;
     }
 
     try {
         const updatedDistribution = await res.locals.distribution.save();
-        res.json(updatedDistribution);
+        return res.json(updatedDistribution);
     } catch (error) {
-        res.status(400).json({ message: error.message });
+        return res.status(400).json({ message: error.message });
     }
 }

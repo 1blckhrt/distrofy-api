@@ -14,7 +14,7 @@ connectDB();
 app.set("trust proxy", 1);
 app.use(cors());
 app.use(express.json());
-app.use(router);
+app.use("/distributions", router);
 
 app.listen(PORT, () => {
   logger.success(`Server has started on port ${PORT}`);
