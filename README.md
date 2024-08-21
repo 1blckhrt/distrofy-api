@@ -19,7 +19,7 @@ For detailed documentation and examples, please refer to the Distrofy documentat
 
 ## Contributing
 
-I welcome contributions from the community! If you have any ideas, bug reports, or feature requests, please open an issue or submit a pull request on my[GitHub repository](https://github.com/1blckhrt/distrofy-api).
+I welcome contributions from the community! If you have any ideas, bug reports, or feature requests, please open an issue or submit a pull request on my [GitHub repository](https://github.com/1blckhrt/distrofy-api).
 
 ## License
 
