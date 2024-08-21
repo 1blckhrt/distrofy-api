@@ -1,6 +1,2 @@
-import mongoose from "mongoose";
-import { Distribution } from "../models/distribution";
-import connectDB from "./connectDB";
-
-connectDB();
-
+// to do
+// seed data (send initial data to database)

@@ -1,4 +1,4 @@
-import { BasedOn, DefaultDesktopType, InstallMethod, PackageManagementSystem, ReleaseModel } from "src/enums";
+import { BasedOn, DefaultDesktopType, InstallMethod, PackageManagementSystem, ReleaseModel } from "src/utils/enums";
 
 export type Distribution = {
     name: string;

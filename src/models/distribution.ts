@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { BasedOn, DefaultDesktopType, InstallMethod, PackageManagementSystem, ReleaseModel } from "../enums";
+import { BasedOn, DefaultDesktopType, InstallMethod, PackageManagementSystem, ReleaseModel } from "../utils/enums";
 
 const distributionSchema = new mongoose.Schema({
     name: {
