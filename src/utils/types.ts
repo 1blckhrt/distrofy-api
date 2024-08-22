@@ -1,18 +1,11 @@
-import {
-  BasedOn,
-  DefaultDesktopType,
-  InstallMethod,
-  PackageManagementSystem,
-  ReleaseModel
-} from "src/utils/enums";
-
 export type Distribution = {
   name: string;
-  basedOn: BasedOn;
+  basedOn: string;
   latestVersion: string;
-  latestVersionReleaseDate?: Date;
-  packageManagementSystem: PackageManagementSystem;
-  releaseModel: ReleaseModel;
-  defaultDesktopType?: DefaultDesktopType;
-  installMethod?: InstallMethod;
+  latestVersionReleaseDate: Date;
+  packageManagementSystem: string;
+  releaseModel: string;
+  defaultDesktopType: string;
+  installMethod: string;
+  verified: boolean;
 };

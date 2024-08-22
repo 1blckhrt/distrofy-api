@@ -1,11 +1,4 @@
 import mongoose from "mongoose";
-import {
-  BasedOn,
-  DefaultDesktopType,
-  InstallMethod,
-  PackageManagementSystem,
-  ReleaseModel
-} from "../utils/enums";
 
 const distributionSchema = new mongoose.Schema({
   name: {
@@ -14,41 +7,35 @@ const distributionSchema = new mongoose.Schema({
   },
   basedOn: {
     type: String,
-    enum: [BasedOn.Debian, BasedOn.Arch, BasedOn.Independent]
+    required: true
   },
   latestVersion: {
     type: String,
     required: true
   },
   latestVersionReleaseDate: {
-    type: Date
+    type: Date,
+    required: true
   },
   packageManagementSystem: {
     type: String,
-    required: true,
-    enum: [
-      PackageManagementSystem.Apt,
-      PackageManagementSystem.Dnf,
-      PackageManagementSystem.Pacman,
-      PackageManagementSystem.Other
-    ]
+    required: true
   },
   releaseModel: {
     type: String,
-    required: true,
-    enum: [ReleaseModel.Fixed, ReleaseModel.Rolling]
+    required: true
   },
   defaultDesktopType: {
     type: String,
-    enum: [
-      DefaultDesktopType.DesktopEnvironment,
-      DefaultDesktopType.WindowManager,
-      DefaultDesktopType.Terminal
-    ]
+    required: true
   },
   installMethod: {
     type: String,
-    enum: [InstallMethod.CLI, InstallMethod.GUI]
+    required: true
+  },
+  verified: {
+    type: Boolean,
+    default: false
   }
 });
 
