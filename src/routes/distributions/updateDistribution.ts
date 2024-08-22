@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import Distribution from "../../models/distribution";
 
-export async function updateDistribution(req: Request, res: Response) {
+export default async function updateDistribution(req: Request, res: Response) {
   const distributionId = req.params.id;
   const distribution = await Distribution.findById(distributionId);
 

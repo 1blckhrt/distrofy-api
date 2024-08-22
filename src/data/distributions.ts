@@ -10,7 +10,8 @@ export const distributions: Distribution[] = [
     releaseModel: "Fixed",
     defaultDesktopType: "Desktop Environment",
     installMethod: "GUI",
-    verified: true
+    verified: true,
+    submitter: "1blckhrt"
   },
   {
     name: "Arch Linux",
@@ -21,7 +22,8 @@ export const distributions: Distribution[] = [
     releaseModel: "rolling",
     defaultDesktopType: "terminal",
     installMethod: "terminal",
-    verified: true
+    verified: true,
+    submitter: "1blckhrt"
   },
   {
     name: "Fedora",
@@ -32,7 +34,8 @@ export const distributions: Distribution[] = [
     releaseModel: "fixed",
     defaultDesktopType: "Desktop Environment",
     installMethod: "GUI",
-    verified: true
+    verified: true,
+    submitter: "1blckhrt"
   },
   {
     name: "Linux Mint",
@@ -43,6 +46,7 @@ export const distributions: Distribution[] = [
     releaseModel: "fixed",
     defaultDesktopType: "Desktop Environment",
     installMethod: "GUI",
-    verified: true
+    verified: true,
+    submitter: "1blckhrt"
   }
 ];

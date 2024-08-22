@@ -8,4 +8,5 @@ export type Distribution = {
   defaultDesktopType: string;
   installMethod: string;
   verified: boolean;
+  submitter: string;
 };

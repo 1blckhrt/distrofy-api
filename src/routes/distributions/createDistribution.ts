@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import Distribution from "../../models/distribution";
 
-export async function createDistribution(req: Request, res: Response) {
+export default async function createDistribution(req: Request, res: Response) {
   const distributionEntry = new Distribution({
     name: req.body.name,
     basedOn: req.body.basedOn || undefined,
