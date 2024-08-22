@@ -1,7 +1,7 @@
 import express from "express";
-import { createDistribution } from "./distributions/createDistribution";
-import { getDistributions } from "./distributions/getAllDistributions";
-import { updateDistribution } from "./distributions/updateDistribution";
+import createDistribution from "./distributions/createDistribution";
+import getDistributions from "./distributions/getAllDistributions";
+import updateDistribution from "./distributions/updateDistribution";
 
 const router = express.Router();
 
