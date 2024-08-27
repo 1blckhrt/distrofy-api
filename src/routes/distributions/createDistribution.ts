@@ -11,7 +11,8 @@ export default async function createDistribution(req: Request, res: Response) {
       packageManagementSystem: req.body.packageManagementSystem,
       releaseModel: req.body.releaseModel,
       defaultDesktopType: req.body.defaultDesktopType,
-      installMethod: req.body.installMethod
+      installMethod: req.body.installMethod,
+      submitter: req.body.submitter
     });
 
     const distributionExists = await Distribution.findOne({

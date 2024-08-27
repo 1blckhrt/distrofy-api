@@ -36,6 +36,10 @@ const distributionSchema = new mongoose.Schema({
   verified: {
     type: Boolean,
     default: false
+  },
+  submitter: {
+    type: String,
+    required: true
   }
 });
 

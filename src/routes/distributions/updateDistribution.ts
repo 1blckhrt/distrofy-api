@@ -45,6 +45,10 @@ export default async function updateDistribution(req: Request, res: Response) {
     res.locals.distribution.installMethod = req.body.installMethod;
   }
 
+  if (req.body.submitter != null) {
+    res.locals.distribution.submitter = req.body.distribution.submitter;
+  }
+
   try {
     const updatedDistribution = await res.locals.distribution.save();
     return res.json(updatedDistribution);
