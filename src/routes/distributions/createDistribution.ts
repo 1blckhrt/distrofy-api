@@ -5,13 +5,13 @@ export default async function createDistribution(req: Request, res: Response) {
   try {
     const distributionEntry = new Distribution({
       name: req.body.name,
-      basedOn: req.body.basedOn || undefined,
+      basedOn: req.body.basedOn,
       latestVersion: req.body.latestVersion,
-      latestVersionReleaseDate: req.body.latestVersionReleaseDate || undefined,
+      latestVersionReleaseDate: req.body.latestVersionReleaseDate,
       packageManagementSystem: req.body.packageManagementSystem,
       releaseModel: req.body.releaseModel,
-      defaultDesktopType: req.body.defaultDesktopType || undefined,
-      installMethod: req.body.installMethod || undefined
+      defaultDesktopType: req.body.defaultDesktopType,
+      installMethod: req.body.installMethod
     });
 
     const distributionExists = await Distribution.findOne({
