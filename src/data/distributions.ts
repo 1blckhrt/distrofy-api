@@ -1,4 +1,4 @@
-import { Distribution } from "src/utils/types";
+import type { Distribution } from "src/utils/types";
 
 export const distributions: Distribution[] = [
   {
@@ -14,7 +14,7 @@ export const distributions: Distribution[] = [
     submitter: "1blckhrt"
   },
   {
-    name: "Arch Linux",
+    name: "Arch",
     basedOn: "Arch",
     latestVersion: "2024-08-21",
     latestVersionReleaseDate: new Date("2024-08-21"),
