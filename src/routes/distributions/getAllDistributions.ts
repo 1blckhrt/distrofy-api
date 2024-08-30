@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import type { Request, Response } from "express";
 import Distribution from "../../models/distribution";
 
 export default async function getDistributions(_req: Request, res: Response) {

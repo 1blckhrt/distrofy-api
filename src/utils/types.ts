@@ -1,12 +1,12 @@
 export type Distribution = {
-  name: string;
   basedOn: string;
-  latestVersion: string;
-  latestVersionReleaseDate: Date;
-  packageManagementSystem: string;
-  releaseModel: string;
   defaultDesktopType: string;
   installMethod: string;
-  verified: boolean;
+  latestVersion: string;
+  latestVersionReleaseDate: Date;
+  name: string;
+  packageManagementSystem: string;
+  releaseModel: string;
   submitter: string;
+  verified: boolean;
 };

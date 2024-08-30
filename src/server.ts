@@ -1,16 +1,17 @@
+import process from "node:process";
+import { logger } from "@1blckhrt_/tslogger";
+import cors from "cors";
 import dotenv from "dotenv";
 import express from "express";
-import cors from "cors";
-import connectDB from "./utils/connectDB";
-import { logger } from "@1blckhrt_/tslogger";
 import router from "./routes";
+import connectDB from "./utils/connectDB";
 
 dotenv.config();
 
-const PORT = Number.parseInt(process.env.PORT ?? "3000");
+const PORT = process.env.PORT;
 
 const app = express();
-connectDB();
+void connectDB();
 app.set("trust proxy", 1);
 app.use(cors());
 app.use(express.json());
